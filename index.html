@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #1e1e1e;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        .form-control:focus {
+            background-color: #1e1e1e;
+            color: white;
+            border-color: #888;
+        }
+
+        .btn-primary {
+            background-color: #0066cc;
+            border-color: #005bb5;
+        }
+
+        .btn-primary:hover {
+            background-color: #005bb5;
+        }
+
+        .page-header {
+            margin-top: 20px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h2>Shipment Management Form</h2>
+        </div>
+        <form id="shipmentForm" method="get">
+            <div class="form-group">
+                <label>Shipment No.:</label>
+                <input type="text" id="shipno" class="form-control" onchange="getShipment()">
+            </div>
+
+            <div class="form-group">
+                <label>Description:</label>
+                <input type="text" id="description" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Source:</label>
+                <input type="text" id="source" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Destination:</label>
+                <input type="text" id="destination" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Shipping Date:</label>
+                <input type="date" id="shipdate" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Expected Delivery Date:</label>
+                <input type="date" id="deliverydate" class="form-control">
+            </div>
+
+            <div class="form-group text-center">
+                <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                <button type="button" class="btn btn-lg btn-primary" id="change" onclick="changeData()" disabled>Change</button>
+                <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetForm()" disabled>Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
